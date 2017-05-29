@@ -1,0 +1,229 @@
+/* 
+	Agência WEBi - http://www.webi.com.br
+	Cliente: Nome do cliente
+*/
+
+/* font-family: 'Libre Baskerville', serif; */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* geral */
+html 									{ width: 100%; height: 100%; }
+body 									{ width: 100%; height: auto; font-size: 14px; font-family: 'Open Sans', sans-serif !important; background: #fff; color: #241f2a; }
+
+/* contato */
+#sucesso_formulario 					{ background: #DFF0D8; color: #468847; border: 1px solid #468847; padding: 10px; margin-bottom: 10px; }
+#erro_formulario 						{ background: #FDF7F7; color: #D9534F; border: 1px solid #D9534F; padding: 10px; margin-bottom: 10px; }
+
+/* pagination */
+.pagination 							{ display: block; width: 100%; clear: both; }
+.pagination strong 						{ padding: 0 10px; height: 30px; background: #000; color: #fff; display: block; float: left; margin-right: 3px; line-height: 30px; }
+.pagination a 							{ padding: 0 10px; height: 30px; background: #ED3237; color: #fff; display: block; float: left; margin-right: 3px; line-height: 30px; text-decoration: none; }
+.pagination a:hover 					{ background: #FFEF00; color: #ED3237; }
+
+
+/* intennas */
+.galeria_conteudo 						{  }
+.galeria_conteudo img					{ width: 100%; }
+
+.titleBar 								{ width: 100%; padding: 140px 0 40px 0; background: url('../images/bg-title-bar.jpg') center top;  }
+.titleBar h1 							{ color: #FFF; font-size: 40px; text-align: center; margin: 0; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); font-weight: bold; }
+
+.conteudo 								{ padding: 40px 0;  }
+
+.galeriaProdutos 						{ list-style: none; }
+.galeriaProdutos li						{ width: calc(25% - 2px); float: left; margin: 2px 1px; }
+
+label.error 							{ color: red; font-size: 11px; font-weight: bold; }
+
+
+.boxSidebar 							{ border: 1px solid #DDD; border-radius: 5px; overflow: hidden; }
+.boxSidebar h3 							{ margin: 0; padding: 15px 20px; background: #36668f; color: #FFF; font-size: 20px; }
+.boxSidebar ul 							{ list-style: none; margin: 20px; }
+.boxSidebar ul li 						{  }
+.boxSidebar ul li a						{ display: block; padding: 10px 0; border-bottom: 1px solid #DDD; color: #333; }
+.boxSidebar ul li a:hover 				{ text-decoration: none; color: #36668f; }
+
+
+/* formBusca */
+.formBusca input                        { width: 100%; height: 60px; font-size: 14px; float: left; margin-right: 20px; }
+.formBusca button                       { width: 100%; padding-top: 20px !important; padding-bottom: 20px !important; font-size: 14px; }
+
+/* header */
+header  								{ position: fixed; top: 0; width: 100%; padding: 30px 0 30px 0; margin-top: 0.1px; z-index: 999; background: rgba(0,0,0,0.5); transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header.fixada 							{ padding: 15px 0 15px 0; margin-top: 0; background: rgba(0,0,0,0.95); transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header h1, header p, header ul			{ margin: 0; padding: 0; list-style: none; }
+header .logo 							{ float: left; }
+header .logo img 						{ height: 60px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header.fixada .logo img                 { height: 40px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header.fixada .logo img                 { height: 40px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header .menu 							{ float: right; margin-top: 8px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease;  }
+header.fixada .menu                     { margin-top: 2px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease;  }
+header .menu li 						{ float: left; margin-left: 20px; position: relative; }
+header .menu li a 						{ font-size: 15px; text-transform: uppercase; color: #FFF; display: block; line-height: 45px; border-bottom: 4px solid transparent; font-weight: bold; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header.fixada .menu li a 				{ font-size: 15px; text-transform: uppercase; color: #FFF; display: block; line-height: 35px; border-bottom: 4px solid transparent; font-weight: bold; }
+header .menu li a:hover 				{ text-decoration: none; border-color: #4ab3db; color: #4ab3db; }
+
+header .menu .drop                       { display: none; text-align: left; }
+header .menu .menu_header li:hover .drop { display: block; position: absolute; top: 100%; left: -20px; background: #36658f; width: 260px; z-index: 999; }
+header .menu .drop li                    { margin: 0; width: 100%; }
+header .menu .drop li a                  { padding: 10px 20px; color: #FFF; display: block; line-height: 20px; }
+header .menu .drop li a:hover            { background: #FDFBE6; color: #36658f; }
+
+header .btnBoleto                       { float: right; margin-left: 30px; }
+header .btnBoleto img                   { height: 60px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease;}
+header.fixada .btnBoleto img            { height: 40px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+
+header .menuResponsivo                  { width: 100%; float: none; clear: both; text-align: center; padding-top: 20px; }
+header .menuResponsivo .btn             { font-size: 20px; margin-bottom: 10px; }
+
+header .menuResponsivo .drop, header .menuResponsivo .down { display: none !important; } 
+header .menuResponsivo li               { }
+header .menuResponsivo li a             { background: #36658f; display: block; font-size: 15px; text-transform: uppercase; color: #FFF; display: block; padding: 0 20px; line-height: 45px; font-weight: bold; border-bottom: 1px solid rgba(255,255,255,0.1); }
+header .menuResponsivo li a:hover       { background: #FFF; color: #36658f; text-decoration: none; }
+
+header .socialLinks                     { float: right; margin-left: 20px; margin-top: 10px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header.fixada .socialLinks              { margin-top: 0px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+header .socialLinks li                  { float: left; margin-left: 10px; }
+header .socialLinks li a                { display: block; width: 40px; height: 40px; background: #FFF; font-size: 20px; text-align: center; line-height: 40px; border-radius: 20px; color: #36658f; }
+header .socialLinks li a:hover          { background: #4ab3db; color: #FFF;  }
+
+/* destaques */
+.rslides 								{ position: relative; list-style: none; overflow: hidden; width: 100%; padding: 0; margin: 0; }
+.rslides li 							{ -webkit-backface-visibility: hidden; position: absolute; display: none; width: 100%; left: 0; top: 0; }
+.rslides li:first-child 				{ position: relative; display: block; float: left; }
+.rslides img 							{ display: block; height: auto; float: left; width: 100%; border: 0; }
+
+.destaques                              { position: relative; }
+.destaques .rslides_nav                 { position: absolute; top: 50%; margin-top: -25px; width: 50px; height: 50px; display: block; background: #000; color: #FFF; text-align: center; line-height: 50px; z-index: 999; border-radius: 100%; }
+.destaques .rslides_nav.prev            { left: 20px; }
+.destaques .rslides_nav.next            { right: 20px; }
+.destaques .rslides_nav.prev:before     { content: "\f053"; font-family: 'FontAwesome'; display: inline-block; }
+.destaques .rslides_nav.next:before     { content: "\f054"; font-family: 'FontAwesome'; display: inline-block; }
+
+/* newsletter */
+.newsletter                             { background: #151515; padding: 20px 0 0; }
+.newsletter h3                          { padding: 0; margin: 0; font-size: 18px; color: #FFF; line-height: 37px; }
+.newsletter input                       { width: 100% !important; height: 37px; }
+.newsletter button                      { }
+.newsletter button:hover                {  }
+
+/* produtos */
+.produtos                               { padding: 40px 0; }
+.produtos h2                            { font-size: 40px; padding: 0; margin: 0 0 30px 0; text-align: center; }
+.listaProdutos ul                       { list-style: none; margin-bottom: 0; }
+.listaProdutos ul li 					{ margin-bottom: 30px; }
+.listaProdutos ul li .padd              { background: #efefef; padding: 20px; border-radius: 5px; border: 1px solid #DDD; text-align: center; }
+.listaProdutos ul li img                { width: 100%;  }
+.listaProdutos ul li h3                 { font-size: 18px; font-weight: bold; text-align: center; height: 40px; overflow: hidden; }
+.listaProdutos ul li p                  { height: 40px; overflow: hidden; }
+
+#categorias                             { position: relative; }
+#categorias .item                       { margin-left: 1.5rem; margin-right: 1.5rem; }     
+
+
+#categorias .owl-buttons                { width: 100%; text-align: center; padding-top: 0px; }
+#categorias .owl-buttons div            { width: 50px; height: 50px; display: inline-block; background: #000; color: #FFF !important; text-align: center; line-height: 50px; z-index: 999; border-radius: 100%; margin: 0 5px; }
+
+
+/* depoimentos */
+.depoimentos                            { padding: 40px 0; background: url('../images/bg-depoimentos.jpg') top center; }
+.depoimentos h2                         { font-size: 40px; padding: 0; margin: 0 0 30px 0; text-align: center; color: #FFF; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
+
+.listaDepoimentos ul                    { list-style: none; margin-bottom: 0; }
+.listaDepoimentos ul li                 { background: #FFF; border-radius: 5px; }
+.listaDepoimentos ul li .padd           { padding: 20px;  }
+.listaDepoimentos ul li img             { width: 100%; border-radius: 100%; overflow: hidden;  }
+.listaDepoimentos ul li .depoimento     { position: relative; background: #efefef; border-radius: 5px; padding: 20px 20px 10px 20px; }
+.listaDepoimentos ul li .depoimento .seta   { position: absolute; top: 45px; left: -9px; width: 20px; height: 20px; display: block; background: #efefef; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+
+#depoimentos                            { position: relative; }
+#depoimentos .owl-buttons               { width: 100%; text-align: center; padding-top: 10px; }
+#depoimentos .owl-buttons div           { width: 50px; height: 50px; text-indent: -9999px; display: inline-block; margin: 0 5px; border-radius: 100%; }
+#depoimentos .owl-buttons .owl-prev     { background: url('../images/owl-prev.png') center rgba(0,0,0,0); }
+#depoimentos .owl-buttons .owl-prev:hover { background: url('../images/owl-prev.png') center rgba(0,0,0,0.5); }
+#depoimentos .owl-buttons .owl-next     { background: url('../images/owl-next.png') center rgba(0,0,0,0); }
+#depoimentos .owl-buttons .owl-next:hover { background: url('../images/owl-next.png') center rgba(0,0,0,0.5); }
+
+/* servicos */
+.servicos                                { padding: 40px 0; background: #efefef; }
+.servicos h2                             { padding: 0; margin: 0 0 30px 0; text-align: center; font-size: 40px; }
+
+.listaServicos ul                       { list-style: none; margin-bottom: 0; }
+.listaServicos ul li .padd              { background: #FFF; padding: 20px; border-radius: 5px; border: 1px solid #DDD; text-align: center; }
+.listaServicos ul li h3                 { font-size: 16px; font-weight: bold; text-align: center; overflow: hidden; margin: 0 0 15px 0; }
+.listaServicos ul li img                { border-radius: 100%; overflow: hidden; margin-bottom: 10px; }
+.listaServicos ul li p                  { height: 40px; overflow: hidden; }
+
+/* noticias */
+.noticias                                { padding: 40px 0; background: #fff; }
+.noticias h2                             { padding: 0; margin: 0 0 30px 0; text-align: center; font-size: 40px; }
+
+.listaNoticias ul                       { list-style: none; margin-bottom: 0; }
+.listaNoticias ul li 					{ margin-bottom: 30px; }
+.listaNoticias ul li .padd              { background: #FFF; padding: 20px; border-radius: 5px; border: 1px solid #DDD; text-align: center; }
+.listaNoticias ul li h3                 { font-size: 20px; font-weight: bold; height: 45px; overflow: hidden; }
+.listaNoticias ul li img                { width: 100%; }
+.listaNoticias ul li p                  { height: 40px; overflow: hidden; }
+.listaNoticias ul li .data 				{ line-height: 37px;  }
+
+/* clientes */
+.clientes                                { padding: 40px 0; background: #efefef; }
+.clientes h2                             { padding: 0; margin: 0 0 30px 0; text-align: center; font-size: 40px; }
+
+.listaClientes                           {  }
+.listaClientes ul                        { list-style: none; }
+.listaClientes img                       { width: 100%; }
+.listaClientes .item                     { margin: 0 15px; }
+
+/* footer */
+footer                                  { padding: 40px 0; background: #36658f; }
+footer h3                               { font-size: 18px; color: #58caff; text-transform: uppercase; margin: 0 0 30px 0; }
+footer p                                { color: #FFF;  }
+footer p i                              { display: block; width: 100%; font-size: 24px !important; color: #58caff; }
+footer a                                { color: #FFF;  }
+footer a:hover                          { color: #58caff; text-decoration: none; }
+footer ul                               { list-style: none; }
+footer ul a  							{ font-size: 16px; display: block; padding: 5px 0; }
+
+footer .drop, footer .down              { display: none; }
+
+.boxCreditos 							{  padding: 10px 0; background: #1d4569; }
+.boxCreditos p 							{ float: left; color: #FFF; }
+.boxCreditos a 							{ float: right; color: #FFF; }
+.boxCreditos a:hover                    { color: #58caff; text-decoration: none; }
+
+/* interesse */
+.interesse                              { padding: 40px 0; background: #efefef; }
+.interesse h2                           { padding: 0; margin: 0 0 30px 0; text-align: center; font-size: 40px; }
+
+
+
+@media (max-width: 768px) {
+    header .logo img                    { height: 40px; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+    header .btnBoleto                   { display: block; width: 100%; text-align: center; margin-top: 20px; }
+    header .btnBoleto img               { height: auto !important; transition: all .3s ease; -moz-transition: all .3s ease; -webkit-transition: all .3s ease; }
+    header .socialLinks                 { margin-top: 0; }
+}
+
+@media (max-width: 991px) {
+    header                              { position: relative; background: #000; }    
+    .titleBar                           { width: 100%; padding: 40px 0 40px 0; background: url('../images/bg-title-bar.jpg') center top;  }
+
+    footer .row .col-sm-12              { padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+}
+
+.overlay {
+   background: transparent; 
+   position: relative; 
+   width: 100%;
+   height:450px; /* your iframe height */
+   top:450px;  /* your iframe height */
+   margin-top:-450px;  /* your iframe height */
+}
+
+
+
+
+
+
+

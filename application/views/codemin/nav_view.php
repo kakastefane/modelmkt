@@ -8,56 +8,53 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="<?=base_url()?>gercont">GERCONT</a>
+			<!--<a href="<?=base_url()?>adm"><img style="margin-left:3px;" src="./public/images/logo.png" alt="Dashboard" class="logo navbar-brand"></a> -->				
+			<a class="navbar-brand" href="<?=base_url()?>adm">DASHBOARD</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="divider-vertical"></li>
 				<?php foreach ($navlinks as $key => $value) { ?>
-				<li <?php if($activelink == $key){ echo 'class="active"'; } ?>><a href="<?=base_url()?>gercont/<?=$key?>"><i class="fa fa-edit"></i> <?=$value?></a></li>
+				<li <?php if($activelink == $key){ echo 'class="active"'; } ?>><a href="<?=base_url()?>adm/<?=$key?>"><i class="fa fa-edit"></i> <?=$value?></a></li>
 				<?php } ?>
-				<?php if(($this->session->userdata('administrador') || in_array('catalogo_categorias', $permissoes) || in_array('catalogo_produtos', $permissoes) || in_array('catalogo_configuracao', $permissoes) || in_array('catalogo_listar_pedidos', $permissoes)) && $this->config->item('gercont-gerenciar-catalogo')){ ?>
+				<?php if(($this->session->userdata('administrador') || in_array('catalogo_categorias', $permissoes) || in_array('catalogo_produtos', $permissoes) || in_array('catalogo_configuracao', $permissoes) || in_array('catalogo_listar_pedidos', $permissoes)) && $this->config->item('adm-gerenciar-catalogo')){ ?>
 				<li <?php if($activelink == 'catalogo_categorias' ||  $activelink == 'catalogo_produtos' ||  $activelink == 'catalogo_configuracao' || $activelink == 'catalogo_listar_pedidos'){ echo 'class="active"'; } ?>>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Catálogo</a>
 					<ul class="dropdown-menu">
 						<?php if($this->session->userdata('administrador') || in_array('catalogo_categorias', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/catalogo_categorias">Categorias</a></li>
+						<li><a href="<?=base_url()?>adm/catalogo_categorias">Categorias</a></li>
 						<?php } if($this->session->userdata('administrador') || in_array('catalogo_produtos', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/catalogo_produtos">Produtos</a></li>
-						<?php } if($this->session->userdata('administrador') || in_array('catalogo_configuracao', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/catalogo_configuracao">Configuração</a></li>
-						<?php } if($this->session->userdata('administrador') || in_array('catalogo_listar_pedidos', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/catalogo_listar_pedidos">Listar Pedidos</a></li>
+						<li><a href="<?=base_url()?>adm/catalogo_produtos">Produtos</a></li>
 						<?php } ?>
 					</ul>
 				</li>
 			  	<?php } ?>
-			  	<?php if(($this->session->userdata('administrador') || in_array('contato', $permissoes) || in_array('contatos', $permissoes) || in_array('newsletter', $permissoes)) && $this->config->item('gercont-gerenciar-contato')){ ?>
+			  	<?php if(($this->session->userdata('administrador') || in_array('contato', $permissoes) || in_array('contatos', $permissoes) || in_array('newsletter', $permissoes)) && $this->config->item('adm-gerenciar-contato')){ ?>
 				<li <?php if($activelink == 'contato' ||  $activelink == 'contatos' || $activelink == 'newsletter'){ echo 'class="active"'; } ?>>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Contatos</a>
 					<ul class="dropdown-menu">
 						<?php if($this->session->userdata('administrador') || in_array('contatos', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/contatos">Recebidos</a></li>
+						<li><a href="<?=base_url()?>adm/contatos">Recebidos</a></li>
 						<?php } if($this->session->userdata('administrador') || in_array('contato', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/contato">Configurar</a></li>
+						<li><a href="<?=base_url()?>adm/contato">Configurar</a></li>
 						<?php } if($this->session->userdata('administrador') || in_array('newsletter', $permissoes)){ ?>
-						<li><a href="<?=base_url()?>gercont/newsletter">Newsletter</a></li>
+						<li><a href="<?=base_url()?>adm/newsletter">Newsletter</a></li>
 						<?php } ?>
 					</ul>
 				</li>
 				<?php } ?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li <?php if(!$activelink){ echo 'class="active"'; } ?>><a href="<?=base_url()?>gercont"><i class="fa fa-home"></i></a></li>
+				<li <?php if(!$activelink){ echo 'class="active"'; } ?>><a href="<?=base_url()?>adm"><i class="fa fa-home"></i></a></li>
 				<li><a target="_blank" href="<?=base_url()?>"><i class="fa fa-globe"></i></a></li>
 				<li <?php if($activelink == 'usuarios'){ echo 'class="active"'; } ?>>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench"></i></a>
 					<ul class="dropdown-menu">
 						<?php if($this->session->userdata('administrador')){ ?>
-						<li><a href="<?=base_url()?>gercont/usuarios"><i class="fa fa-user"></i> Usuários</a></li>
+						<li><a href="<?=base_url()?>adm/usuarios"><i class="fa fa-user"></i> Usuários</a></li>
 						<?php } ?>
-						<li><a href="<?=base_url()?>gercont/logout"><i class="fa fa-sign-out"></i> Sair do Sitema</a></li>
+						<li><a href="<?=base_url()?>adm/logout"><i class="fa fa-sign-out"></i> Sair do Sitema</a></li>
 					</ul>
 				</li>
 			</ul>

@@ -1270,6 +1270,8 @@ class Administrador extends CI_Controller {
         $data['log_acessos'] = $this->codemin_model->pegar_log_acessos(15, true);
         $data['meus_acessos'] = $this->codemin_model->pegar_log_acessos(15);
 
+        $data['configuracoes'] = $this->gercont_model->configuracoes();
+
         if (in_array('contatos', $this->configuracoes['permissoes']) || $this->session->userdata('administrador'))
             $data['novos_contatos'] = $this->gercont_model->pegar_novos_contatos(5);
 
@@ -1299,7 +1301,7 @@ class Administrador extends CI_Controller {
 
         $data['scriptFooter'] = array();
         $data['nivel_acesso'] = 0;
-
+        $data['configuracoes'] = $this->gercont_model->configuracoes();
         if ($this->input->post('enviado')) {
 
             $login = $this->input->post('login');
@@ -1321,7 +1323,7 @@ class Administrador extends CI_Controller {
     // Função padrão, não remover
     public function logout() {
         $this->session->sess_destroy();
-        redirect(base_url() . $this->uri->segment(1) . '/login', 'location');
+        redirect(base_url() . 'adm' . '/login', 'location');
     }
 
 }

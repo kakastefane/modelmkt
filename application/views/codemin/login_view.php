@@ -1,13 +1,12 @@
 <div class="container">
 <div class="row" style="margin-top: 150px;">
-
-    <div class="col-sm-12 col-md-6">
-    	<h1>Bem vindo ao <strong>Gercont</strong></h1>
+    <div class="col-sm-12 col-md-12">
+    	<h1 style="text-align: center">Bem vindo ao <strong>ADM - <?php echo $configuracoes->titulo;?></strong></h1>
     </div>
 
-    <div class="col-sm-12 col-md-5 col-md-offset-1">
+    <div class="col-sm-12 col-md-6 col-md-offset-3">
 	    <div class="well">
-		    <legend>Acessar o Gercont</legend>
+		    <legend>Acesso ao Painel Administrativo</legend>
 		    <?= form_open('') ?>
 		    	<?php if(isset($erro)){ ?>
 			    <div class="alert alert-error">
@@ -54,8 +53,8 @@
 
 				<?php
 				$data = array(
-					'value'	=> 'Acessar',
-					'class' => 'btn btn-success btn-lg'
+					'value'	=> 'Entrar',
+					'class' => 'btn btn-default btn-lg'
 			    );
 				echo form_submit($data); ?>
 
